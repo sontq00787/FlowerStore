@@ -1,0 +1,99 @@
+/*------------------------------------------------------------------------------ light green colors */
+.blog .blog-sidebar .h3-line:after,
+.box-text-with-image-left .h3-line:after,
+.box-text-with-image-right .h3-line:after,
+.contact .h3-line:after,
+.four-boxes .four-boxes-element .h3-line:after,
+.double-boxes .double-boxes-element .h3-line:after,
+.events .events-element .h3-line:after,
+.opening-hours .left .h3-line:after,
+.opening-hours .right .h3-line:after,
+.pricing .left .h3-line:after,
+.promotion .h3-line:after,
+.shop .shop-cart-totals .payment-method .h3-line:after,
+.shop .shop-checkout .h3-line:after,
+.shop .shop-sidebar .h3-line:after,
+.blog .blog-sidebar .widget .tags-cloud .tag:hover,
+.comments ol.comments-list .comment-author-info .comment-author-name a.comment-reply-link:hover,
+.shop .shop-sidebar .widget .tags-cloud .tag:hover,
+footer .h3-line:after,
+#gallery-popup .gallery-popup-content .left .h3-line:after,
+#appointment-popup .appointment-popup-content .h3-line:after {
+    background: #8bbc00;
+}
+
+.opening-hours .left .day-info .day-info-single h4 span,
+.slogan h2 span,
+.pricing .right ul li span.price,
+.products .products-element span.price,
+.opening-hours .left .other-days li.active,
+.opening-hours .left .other-days li:hover,
+.box-text-with-image-left ul li i,
+.box-text-with-image-right ul li i,
+.contact form#contact-form .confirm .notice,
+.opening-hours .right p.phone-details span,
+.shop .shop-products-list .shop-single-product span.price,
+.shop .shop-product span.price,
+.shop .shop-important-facts i,
+.shop .shop-important-facts-horizontal i,  
+.shop .shop-sidebar .widget.widget-cart .subtotal,
+.blog .blog-content .blog-event-details h5,
+.big-image-header h4,
+footer p i,
+header .header-content .center .left .header-slogan span,
+header .header-menu .menu li ul.sub-menu li a:hover,
+header .header-menu .menu li ul.sub-menu li a:hover i,
+header .header-menu .menu li ul.sub-menu li.active > a,
+header .header-menu .menu li ul.sub-menu li.active > a i {
+    color: #8bbc00;
+}
+
+#gallery-popup .gallery-popup-content .left .gallery-thumbnails .gallery-thumbnail:hover,
+#gallery-popup .gallery-popup-content .left .gallery-thumbnails .gallery-thumbnail.active,
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+.custom-dropdown-select:focus {
+    border: 1px solid #8bbc00;
+}
+
+.blog .blog-content blockquote,
+.comments ol.comments-list .bypostauthor .comment-author-avatar,
+.shop .shop-content blockquote {
+    border-left: 3px solid #8bbc00;
+}
+
+@-moz-keyframes bounce_circleG {
+
+    0% {}
+    50% { background-color: #8bbc00 }
+    100% {}
+}
+
+@-webkit-keyframes bounce_circleG {
+    
+    0% {}
+    50% { background-color: #8bbc00 }
+    100% {}
+}
+
+@-ms-keyframes bounce_circleG {
+
+    0% {}
+    50% { background-color: #8bbc00 }
+    100% {}
+}
+
+@-o-keyframes bounce_circleG {
+
+    0% {}
+    50% { background-color: #8bbc00 }
+    100% {}
+}
+
+@keyframes bounce_circleG {
+
+    0%{}
+    50% { background-color: #8bbc00 }
+    100% {}
+}
