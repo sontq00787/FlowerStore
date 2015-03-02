@@ -10,12 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Signika:300,400,600,700" />
-    <link rel="stylesheet" type="text/css" href="_assets/_libs/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="_assets/_libs/demo-switcher/demo-switcher.css" />
-    <link rel="stylesheet" type="text/css" href="_assets/_libs/animate.css" />     
-    <link rel="stylesheet" type="text/css" href="_assets/_css/style.css" />   
-    <link rel="stylesheet" type="text/css" href="_assets/_css/colors/green.css" />     
-
+    @include("include/header")  
+    <link rel="shortcut icon" href="{{asset('_img/rose.ico')}}" type="image/x-icon">
 </head>
 <body>
 
@@ -34,176 +30,7 @@
 
     </div>
 
-    <!--
-    header
-    -->
-    <header data-menu-autostart="false">
-    
-        <!--
-        header content
-        -->
-        <div class="header-content">
-        
-            <div class="center">
-            
-                <!--
-                logo
-                -->
-                <div class="left">
-                
-                    <a href="index-2.html"><img src="_assets/_img/logo.png" alt="" /></a>
-                    <div class="header-slogan">HTML5 template <span>for florists</span></div>
-                                 
-                </div>
-                
-                <!--
-                contact informations
-                -->
-                <div class="right">
-                
-                    <div class="padding">
-
-                        <h3>Do you have <span>any question?</span></h3>
-                        
-                        <p>Nunc ac venenatis velit. Integer tincidunt, turpis id bibendum convallis, dui arcu laoreet lectus, a tincidunt nulla lacus et lacus. Pellentesque dignissim urna consec tetur adipiscing elit aenean dapibus.</p>
-                        <p class="action"><a href="index-2.html#contact" class="button button-green">Feel free to contact us!</a> <span>or call us: <strong>+156 98 541 565</strong></span></p>
-
-                    </div>
-                
-                </div>
-                
-                <div class="clear">
-                </div>
-            
-            </div>
-        
-        </div>
-        
-        <!--
-        header menu
-        -->
-        <nav class="header-menu">
-
-            <!--
-            header menu for standard screens
-            -->
-            <ul class="menu menu-standard">
-            
-                <li><a href="index-2.html#home">Home</a></li>
-                <li><a href="index-2.html#about-us">About us</a></li>
-                <li><a href="index-2.html#references">References</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index-2.html#our-bouquets">Our bouquets</a></li>
-                <li><a href="index-2.html#opening-hours">Opening hours</a></li>
-                <li><a href="index-2.html#pricing">Pricing</a></li>
-                <li class="active">
-                
-                    <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
-                
-                    <!--
-                    dropdown menu
-                    -->
-                    <ul class="sub-menu animated speed fadeInUp">
-                    
-                        <li><a href="shop-product.html">Single product</a></li>
-                        <li><a href="shop-cart.html">Cart</a></li>
-                        <li><a href="shop-checkout.html">Checkout</a></li>
-                    
-                    </ul>
-                
-                </li>
-                <li><a href="404.html">404</a></li>
-                <li><a href="index-2.html#contact">Contact</a></li>
-                <li>
-                
-                    <i class="fa fa-search"></i>
-                    
-                    <!--
-                    search form
-                    -->
-                    <form class="search-form animated speed fadeInLeft">
-                    
-                        <input type="text" name="search" placeholder="Type and hit enter..." />
-                    
-                    </form>
-                
-                </li>
-            
-            </ul>
-            
-            <!--
-            header menu for smaller screens (eg. mobile)
-            -->
-            <ul class="menu menu-responsive">
-            
-                <li>
-                
-                    <a>Show menu <i class="fa fa-caret-down"></i> <i class="fa fa-caret-up"></i></a>
-                    
-                    <!--
-                    dropdown menu
-                    -->
-                    <ul class="sub-menu animated speed fadeInUp">
-                    
-                        <li><a href="index-2.html#home">Home</a></li>
-                        <li><a href="index-2.html#about-us">About us</a></li>
-                        <li><a href="index-2.html#references">References</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index-2.html#our-bouquets">Our bouquets</a></li>
-                        <li><a href="index-2.html#opening-hours">Opening hours</a></li>
-                        <li><a href="index-2.html#pricing">Pricing</a></li>
-                        <li class="active">
-                        
-                            <a href="shop.html"><i class="fa fa-caret-left"></i> Shop</a>
-                        
-                            <!--
-                            dropdown menu
-                            -->
-                            <ul class="sub-menu animated speed fadeInUp">
-                            
-                                <li><a href="shop-product.html">Single product</a></li>
-                                <li><a href="shop-cart.html">Cart</a></li>
-                                <li><a href="shop-checkout.html">Checkout</a></li>
-                            
-                            </ul>
-                        
-                        </li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="index-2.html#contact">Contact</a></li>
-                    
-                    </ul>
-                
-                </li>
-                
-                <li>
-                
-                    <i class="fa fa-search"></i>
-                    
-                    <!--
-                    search form
-                    -->
-                    <form class="search-form animated speed fadeInLeft">
-                    
-                        <input type="text" name="search" placeholder="Type and hit enter..." />
-                    
-                    </form>
-                
-                </li>
-            
-            </ul>
-        
-        </nav>
-        
-        <!--
-        header show / hide button
-        -->
-        <div id="menu-button">
-        
-            <i class="fa fa-reorder"></i>
-        
-        </div>
-    
-    </header>
+    @include("include/menu")
     
     <!--
     content
@@ -213,7 +40,7 @@
         <!--
         header
         -->
-        <div class="small-image-header" style="background-image: url( '_assets/_img/florist-working-in-a-store.jpg' ); background-position: 50% 66%;">
+        <div class="small-image-header" style="background-image: url( '_img/florist-working-in-a-store.jpg' ); background-position: 50% 66%;">
 
             <div class="small-image-header-content">
             
@@ -349,451 +176,7 @@
                                 
                                 </div>
 
-                                <!--
-                                billing address field: country (select)
-                                -->
-                                <p>
-                                    
-                                    Country<br />
-                                    <span class="custom-dropdown">
-                                    
-                                        <select name="country" class="custom-dropdown-select">
-                                            
-                                            <option value="">Select a country...</option>
-            		                            <option value="AX">Åland Islands</option>
-                                            <option value="AF">Afghanistan</option>
-                                            <option value="AL">Albania</option>
-                                            <option value="DZ">Algeria</option>
-                                            <option value="AD">Andorra</option>
-                                            <option value="AO">Angola</option>
-                                            <option value="AI">Anguilla</option>
-                                            <option value="AQ">Antarctica</option>
-                                            <option value="AG">Antigua and Barbuda</option>
-                                            <option value="AR">Argentina</option>
-                                            <option value="AM">Armenia</option>
-                                            <option value="AW">Aruba</option>
-                                            <option value="AU">Australia</option>
-                                            <option value="AT">Austria</option>
-                                            <option value="AZ">Azerbaijan</option>
-                                            <option value="BS">Bahamas</option>
-                                            <option value="BH">Bahrain</option>
-                                            <option value="BD">Bangladesh</option>
-                                            <option value="BB">Barbados</option>
-                                            <option value="BY">Belarus</option>
-                                            <option value="PW">Belau</option>
-                                            <option value="BE">Belgium</option>
-                                            <option value="BZ">Belize</option>
-                                            <option value="BJ">Benin</option>
-                                            <option value="BM">Bermuda</option>
-                                            <option value="BT">Bhutan</option>
-                                            <option value="BO">Bolivia</option>
-                                            <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
-                                            <option value="BA">Bosnia and Herzegovina</option>
-                                            <option value="BW">Botswana</option>
-                                            <option value="BV">Bouvet Island</option>
-                                            <option value="BR">Brazil</option>
-                                            <option value="IO">British Indian Ocean Territory</option>
-                                            <option value="VG">British Virgin Islands</option>
-                                            <option value="BN">Brunei</option>
-                                            <option value="BG">Bulgaria</option>
-                                            <option value="BF">Burkina Faso</option>
-                                            <option value="BI">Burundi</option>
-                                            <option value="KH">Cambodia</option>
-                                            <option value="CM">Cameroon</option>
-                                            <option value="CA">Canada</option>
-                                            <option value="CV">Cape Verde</option>
-                                            <option value="KY">Cayman Islands</option>
-                                            <option value="CF">Central African Republic</option>
-                                            <option value="TD">Chad</option>
-                                            <option value="CL">Chile</option>
-                                            <option value="CN">China</option>
-                                            <option value="CX">Christmas Island</option>
-                                            <option value="CC">Cocos (Keeling) Islands</option>
-                                            <option value="CO">Colombia</option>
-                                            <option value="KM">Comoros</option>
-                                            <option value="CG">Congo (Brazzaville)</option>
-                                            <option value="CD">Congo (Kinshasa)</option>
-                                            <option value="CK">Cook Islands</option>
-                                            <option value="CR">Costa Rica</option>
-                                            <option value="HR">Croatia</option>
-                                            <option value="CU">Cuba</option>
-                                            <option value="CW">CuraÇao</option>
-                                            <option value="CY">Cyprus</option>
-                                            <option value="CZ">Czech Republic</option>
-                                            <option value="DK">Denmark</option>
-                                            <option value="DJ">Djibouti</option>
-                                            <option value="DM">Dominica</option>
-                                            <option value="DO">Dominican Republic</option>
-                                            <option value="EC">Ecuador</option>
-                                            <option value="EG">Egypt</option>
-                                            <option value="SV">El Salvador</option>
-                                            <option value="GQ">Equatorial Guinea</option>
-                                            <option value="ER">Eritrea</option>
-                                            <option value="EE">Estonia</option>
-                                            <option value="ET">Ethiopia</option>
-                                            <option value="FK">Falkland Islands</option>
-                                            <option value="FO">Faroe Islands</option>
-                                            <option value="FJ">Fiji</option>
-                                            <option value="FI">Finland</option>
-                                            <option value="FR">France</option>
-                                            <option value="GF">French Guiana</option>
-                                            <option value="PF">French Polynesia</option>
-                                            <option value="TF">French Southern Territories</option>
-                                            <option value="GA">Gabon</option>
-                                            <option value="GM">Gambia</option>
-                                            <option value="GE">Georgia</option>
-                                            <option value="DE">Germany</option>
-                                            <option value="GH">Ghana</option>
-                                            <option value="GI">Gibraltar</option>
-                                            <option value="GR">Greece</option>
-                                            <option value="GL">Greenland</option>
-                                            <option value="GD">Grenada</option>
-                                            <option value="GP">Guadeloupe</option>
-                                            <option value="GT">Guatemala</option>
-                                            <option value="GG">Guernsey</option>
-                                            <option value="GN">Guinea</option>
-                                            <option value="GW">Guinea-Bissau</option>
-                                            <option value="GY">Guyana</option>
-                                            <option value="HT">Haiti</option>
-                                            <option value="HM">Heard Island and McDonald Islands</option>
-                                            <option value="HN">Honduras</option>
-                                            <option value="HK">Hong Kong</option>
-                                            <option value="HU">Hungary</option>
-                                            <option value="IS">Iceland</option>
-                                            <option value="IN">India</option>
-                                            <option value="ID">Indonesia</option>
-                                            <option value="IR">Iran</option>
-                                            <option value="IQ">Iraq</option>
-                                            <option value="IM">Isle of Man</option>
-                                            <option value="IL">Israel</option>
-                                            <option value="IT">Italy</option>
-                                            <option value="CI">Ivory Coast</option>
-                                            <option value="JM">Jamaica</option>
-                                            <option value="JP">Japan</option>
-                                            <option value="JE">Jersey</option>
-                                            <option value="JO">Jordan</option>
-                                            <option value="KZ">Kazakhstan</option>
-                                            <option value="KE">Kenya</option>
-                                            <option value="KI">Kiribati</option>
-                                            <option value="KW">Kuwait</option>
-                                            <option value="KG">Kyrgyzstan</option>
-                                            <option value="LA">Laos</option>
-                                            <option value="LV">Latvia</option>
-                                            <option value="LB">Lebanon</option>
-                                            <option value="LS">Lesotho</option>
-                                            <option value="LR">Liberia</option>
-                                            <option value="LY">Libya</option>
-                                            <option value="LI">Liechtenstein</option>
-                                            <option value="LT">Lithuania</option>
-                                            <option value="LU">Luxembourg</option>
-                                            <option value="MO">Macao S.A.R., China</option>
-                                            <option value="MK">Macedonia</option>
-                                            <option value="MG">Madagascar</option>
-                                            <option value="MW">Malawi</option>
-                                            <option value="MY">Malaysia</option>
-                                            <option value="MV">Maldives</option>
-                                            <option value="ML">Mali</option>
-                                            <option value="MT">Malta</option>
-                                            <option value="MH">Marshall Islands</option>
-                                            <option value="MQ">Martinique</option>
-                                            <option value="MR">Mauritania</option>
-                                            <option value="MU">Mauritius</option>
-                                            <option value="YT">Mayotte</option>
-                                            <option value="MX">Mexico</option>
-                                            <option value="FM">Micronesia</option>
-                                            <option value="MD">Moldova</option>
-                                            <option value="MC">Monaco</option>
-                                            <option value="MN">Mongolia</option>
-                                            <option value="ME">Montenegro</option>
-                                            <option value="MS">Montserrat</option>
-                                            <option value="MA">Morocco</option>
-                                            <option value="MZ">Mozambique</option>
-                                            <option value="MM">Myanmar</option>
-                                            <option value="NA">Namibia</option>
-                                            <option value="NR">Nauru</option>
-                                            <option value="NP">Nepal</option>
-                                            <option value="NL">Netherlands</option>
-                                            <option value="AN">Netherlands Antilles</option>
-                                            <option value="NC">New Caledonia</option>
-                                            <option value="NZ">New Zealand</option>
-                                            <option value="NI">Nicaragua</option>
-                                            <option value="NE">Niger</option>
-                                            <option value="NG">Nigeria</option>
-                                            <option value="NU">Niue</option>
-                                            <option value="NF">Norfolk Island</option>
-                                            <option value="KP">North Korea</option>
-                                            <option value="NO">Norway</option>
-                                            <option value="OM">Oman</option>
-                                            <option value="PK">Pakistan</option>
-                                            <option value="PS">Palestinian Territory</option>
-                                            <option value="PA">Panama</option>
-                                            <option value="PG">Papua New Guinea</option>
-                                            <option value="PY">Paraguay</option>
-                                            <option value="PE">Peru</option>
-                                            <option value="PH">Philippines</option>
-                                            <option value="PN">Pitcairn</option>
-                                            <option value="PL">Poland</option>
-                                            <option value="PT">Portugal</option>
-                                            <option value="QA">Qatar</option>
-                                            <option value="IE">Republic of Ireland</option>
-                                            <option value="RE">Reunion</option>
-                                            <option value="RO">Romania</option>
-                                            <option value="RU">Russia</option>
-                                            <option value="RW">Rwanda</option>
-                                            <option value="ST">São Tomé and Príncipe</option>
-                                            <option value="BL">Saint Barthélemy</option>
-                                            <option value="SH">Saint Helena</option>
-                                            <option value="KN">Saint Kitts and Nevis</option>
-                                            <option value="LC">Saint Lucia</option>
-                                            <option value="SX">Saint Martin (Dutch part)</option>
-                                            <option value="MF">Saint Martin (French part)</option>
-                                            <option value="PM">Saint Pierre and Miquelon</option>
-                                            <option value="VC">Saint Vincent and the Grenadines</option>
-                                            <option value="SM">San Marino</option>
-                                            <option value="SA">Saudi Arabia</option>
-                                            <option value="SN">Senegal</option>
-                                            <option value="RS">Serbia</option>
-                                            <option value="SC">Seychelles</option>
-                                            <option value="SL">Sierra Leone</option>
-                                            <option value="SG">Singapore</option>
-                                            <option value="SK">Slovakia</option>
-                                            <option value="SI">Slovenia</option>
-                                            <option value="SB">Solomon Islands</option>
-                                            <option value="SO">Somalia</option>
-                                            <option value="ZA">South Africa</option>
-                                            <option value="GS">South Georgia/Sandwich Islands</option>
-                                            <option value="KR">South Korea</option>
-                                            <option value="SS">South Sudan</option>
-                                            <option value="ES">Spain</option>
-                                            <option value="LK">Sri Lanka</option>
-                                            <option value="SD">Sudan</option>
-                                            <option value="SR">Suriname</option>
-                                            <option value="SJ">Svalbard and Jan Mayen</option>
-                                            <option value="SZ">Swaziland</option>
-                                            <option value="SE">Sweden</option>
-                                            <option value="CH">Switzerland</option>
-                                            <option value="SY">Syria</option>
-                                            <option value="TW">Taiwan</option>
-                                            <option value="TJ">Tajikistan</option>
-                                            <option value="TZ">Tanzania</option>
-                                            <option value="TH">Thailand</option>
-                                            <option value="TL">Timor-Leste</option>
-                                            <option value="TG">Togo</option>
-                                            <option value="TK">Tokelau</option>
-                                            <option value="TO">Tonga</option>
-                                            <option value="TT">Trinidad and Tobago</option>
-                                            <option value="TN">Tunisia</option>
-                                            <option value="TR">Turkey</option>
-                                            <option value="TM">Turkmenistan</option>
-                                            <option value="TC">Turks and Caicos Islands</option>
-                                            <option value="TV">Tuvalu</option>
-                                            <option value="UG">Uganda</option>
-                                            <option value="UA">Ukraine</option>
-                                            <option value="AE">United Arab Emirates</option>
-                                            <option value="GB" selected="selected">United Kingdom (UK)</option>
-                                            <option value="US">United States (US)</option>
-                                            <option value="UY">Uruguay</option>
-                                            <option value="UZ">Uzbekistan</option>
-                                            <option value="VU">Vanuatu</option>
-                                            <option value="VA">Vatican</option>
-                                            <option value="VE">Venezuela</option>
-                                            <option value="VN">Vietnam</option>
-                                            <option value="WF">Wallis and Futuna</option>
-                                            <option value="EH">Western Sahara</option>
-                                            <option value="WS">Western Samoa</option>
-                                            <option value="YE">Yemen</option>
-                                            <option value="ZM">Zambia</option>
-                                            <option value="ZW">Zimbabwe</option>
-                                        
-                                        </select>
-                                    
-                                    </span>
-                                
-                                </p>
-                            
-                                <!--
-                                billing address double fields
-                                -->
-                                <div class="double-fields">
-                                
-                                    <!--
-                                    billing address left side field: first name
-                                    -->
-                                    <div class="left">
-                                    
-                                        <div class="padding-left">
-                                        
-                                            <p>
-                                            
-                                                First name<br />
-                                                <input type="text" name="" />
-                                            
-                                            </p>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <!--
-                                    billing address right side field: last name
-                                    -->
-                                    <div class="right">
-                                    
-                                        <div class="padding-right">
-                                        
-                                            <p>
-                                            
-                                                Last name<br />
-                                                <input type="text" name="" />
-                                            
-                                            </p>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <div class="clear">
-                                    </div>
-                                
-                                </div>
-                            
-                                <!--
-                                billing address field: company name
-                                -->
-                                <p>
-                                
-                                    Company name<br />
-                                    <input type="text" name="" />
-                                
-                                </p>
-
-                                <!--
-                                billing address double fields
-                                -->
-                                <div class="double-fields">
-                                
-                                    <!--
-                                    billing address left side field: address
-                                    -->
-                                    <div class="left">
-                                    
-                                        <div class="padding-left">
-                                        
-                                            <p>
-                                            
-                                                Address<br />
-                                                <input type="text" name="" placeholder="Street address" />
-                                            
-                                            </p>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <!--
-                                    billing address right side field: apartment etc.
-                                    -->
-                                    <div class="right">
-                                    
-                                        <div class="padding-right">
-                                        
-                                            <p>
-                                            
-                                                <br />
-                                                <input type="text" name="" placeholder="Apartment, suite, unit etc. (optional)" />
-                                            
-                                            </p>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <div class="clear">
-                                    </div>
-                                
-                                </div>
-
-                                <!--
-                                billing address field: town / city
-                                -->
-                                <p>
-                                
-                                    Town / City<br />
-                                    <input type="text" name="" placeholder="Town / City" />
-    
-                                </p>
-                            
-                                <!--
-                                billing address double fields
-                                -->
-                                <div class="double-fields">
-                                
-                                    <!--
-                                    billing address left side fields
-                                    -->
-                                    <div class="left">
-                                    
-                                        <div class="padding-left">
-                                        
-                                            <!--
-                                            billing address field: state / country
-                                            -->
-                                            <p>
-                                            
-                                                County<br />
-                                                <input type="text" name="" placeholder="State / County" />
-                                            
-                                            </p>
-                                            
-                                            <!--
-                                            billing address field: email address
-                                            -->
-                                            <p>
-                                            
-                                                E-mail address<br />
-                                                <input type="text" name="" />
-                                            
-                                            </p>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <!--
-                                    billing address right side fields
-                                    -->
-                                    <div class="right">
-                                    
-                                        <div class="padding-right">
-                                        
-                                            <!--
-                                            billing address field: postcode
-                                            -->
-                                            <p>
-                                            
-                                                Postcode<br />
-                                                <input type="text" name="" placeholder="Postcode / Zip" />
-                                            
-                                            </p>
-                                            
-                                            <!--
-                                            billing address field: phone
-                                            -->
-                                            <p>
-                                            
-                                                Phone<br />
-                                                <input type="text" name="" />
-                                            
-                                            </p>
-                                        
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <div class="clear">
-                                    </div>
-                                
-                                </div>
+                                @yield('main-address')
                         
                                 <!--
                                 billing address field: create an account
@@ -808,11 +191,13 @@
                                 title
                                 -->
                                 <div class="h3-line">
-                                
-                                    <h3>Ship to a <span>different address?</span> <input type="checkbox" name="different-address" /></h3>
-                                
+                                    @if(Auth::check())
+                                    <h3>Ship to a <span>different address?</span> <input id="different-address" type="checkbox" name="different-address" /></h3>
+                                    @else
+                                    <h3 style="color:green">&raquo;&raquo;&raquo;</h3>
+                                    @endif
+                                    
                                 </div>
-                            
                                 <!--
                                 ship to a different address fields
                                 -->
@@ -826,7 +211,7 @@
                                         Country<br /> 
                                         <span class="custom-dropdown">
                                         
-                                            <select name="country" class="custom-dropdown-select">
+                                            <select id="country2" name="country2" class="custom-dropdown-select">
                                         
                                                 <option value="">Select a country...</option>
                 		                            <option value="AX">Åland Islands</option>
@@ -1095,7 +480,7 @@
                                                 <p>
                                                 
                                                     First name<br />
-                                                    <input type="text" name="" />
+                                                    <input type="text" id="first_name2" name="first_name2" />
                                                 
                                                 </p>
                                             
@@ -1113,7 +498,7 @@
                                                 <p>
                                                 
                                                     Last name<br />
-                                                    <input type="text" name="" />
+                                                    <input type="text" id="last_name2" name="last_name2" />
                                                 
                                                 </p>
                                             
@@ -1132,7 +517,7 @@
                                     <p>
                                     
                                         Company name<br />
-                                        <input type="text" name="" />
+                                        <input type="text" id="company_name2" name="company_name2" />
                                     
                                     </p>
 
@@ -1151,7 +536,7 @@
                                                 <p>
                                                 
                                                     Address<br />
-                                                    <input type="text" name="" placeholder="Street address" />
+                                                    <input type="text" id="address2" name="address2" placeholder="Street address" />
                                                 
                                                 </p>
                                             
@@ -1169,7 +554,7 @@
                                                 <p>
                                                 
                                                     <br />
-                                                    <input type="text" name="" placeholder="Apartment, suite, unit etc. (optional)" />
+                                                    <input type="text" id="address_detail2" name="address_detail2" placeholder="Apartment, suite, unit etc. (optional)" />
                                                 
                                                 </p>
                                             
@@ -1188,7 +573,7 @@
                                     <p>
                                     
                                         Town / City<br />
-                                        <input type="text" name="" placeholder="Town / City" />
+                                        <input type="text" id="town_city2" name="town_city2" placeholder="Town / City" />
         
                                     </p>
                                 
@@ -1207,7 +592,7 @@
                                                 <p>
                                                 
                                                     County<br />
-                                                    <input type="text" name="" placeholder="State / County" />
+                                                    <input type="text" id="state_country2" name="state_country2" placeholder="State / County" />
                                                 
                                                 </p>
                                             
@@ -1225,7 +610,7 @@
                                                 <p>
                                                 
                                                     Postcode<br />
-                                                    <input type="text" name="" placeholder="Postcode / Zip" />
+                                                    <input type="text" id="postcode2" name="postcode2" placeholder="Postcode / Zip" />
                                                 
                                                 </p>
                                             
@@ -1246,7 +631,7 @@
                                 <p class="order-notes">
                                 
                                     Order Notes<br />
-                                    <textarea name="" rows="2" cols="5" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                    <textarea id="notes" name="notes" rows="2" cols="5" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                 
                                 </p>
                     
@@ -1266,51 +651,7 @@
                             <!--
                             shop cart totals table
                             -->
-                            <table>
-    
-    		                        <tr>
-                                
-    			                          <td>Product</td>
-    			                          <td>Total</td>
-                                    
-    		                        </tr>
-                                
-                                <tr>
-                                
-    			                          <td>Flowers pack x 1</td>
-    			                          <td>$8.50</td>
-                                    
-    		                        </tr>
-                                
-                                <tr>
-                                
-    			                          <td>Red tulips x 9</td>
-                                    <td>$13.50</td>
-                                    
-    		                        </tr>
-    
-                                <tr>
-                                
-    			                          <td>Cart Subtotal</td>
-    			                          <td>$22.00</td>
-                                    
-    		                        </tr>
-                                
-                                <tr>
-    
-                                    <td>Shipping and Handling</td>
-                                    <td>Free Shipping</td>
-                                
-                                </tr>
-                                
-                                <tr class="order-total">
-                                
-                                    <td>Order Total</td>
-    			                          <td>$22.00</td>
-                                    
-                                </tr>
-                            
-                            </table>
+                            @yield('shop-cart-totals')
                         
                         </div>
                         
@@ -1390,7 +731,7 @@
                                 <!--
                                 place order button
                                 -->
-                                <button type="button" class="button button-green">Place order</button>
+                                <button id="place_order" type="button" class="button button-green">Place order</button>
                             
                             </div>
                         
@@ -1422,41 +763,18 @@
                             cart products
                             -->
                             <ul class="cart-products">
-                            
-                                <li>
-                                
-                                    <div class="product-data">
-                                    
-                                        <a href="shop-product.html">Flowers pack</a>
-                                        <div class="data">1 x $8.50</div>
-                                        <div class="line"></div>
-                                    
-                                    </div>
-                                
-                                </li>
-                                
-                                <li>
-                                
-                                    <div class="product-data">
-                                    
-                                        <a href="shop-product.html">Red tulips</a>
-                                        <div class="data">9 x $1.50</div>
-
-                                    </div>
-                                
-                                </li>
-
+                                @yield('cart-products')
                             </ul>
                             
                             <!--
                             subtotal
                             -->
-                            <h4>Subtotal: <span class="subtotal">$22.00</span></h4>
+                            @yield('subtotals')
                             
                             <!--
                             action links
                             -->
-                            <p><a href="shop-cart.html">View cart</a> &middot; <a href="shop-checkout.html">Checkout</a></p>
+                            <p><a href="{{URL::route('shop-cart')}}">View cart</a> &middot; <a href="{{URL::route('shop-checkout')}}">Checkout</a></p>
                         
                         </div>
                     
@@ -1756,23 +1074,7 @@
     
     </div>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="_assets/_libs/jquery-2.1.1.min.js"></script>
-    <script src="_assets/_libs/smoothscroll.js"></script>
-    <script src="_assets/_libs/demo-switcher/demo-switcher.js"></script>
-    <script src="_assets/_js/functions.js"></script>
-
-    <!--
-    facebook SDK
-    -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "../../../../connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1476325629301808&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    @include("include.footer")
 
 </body>
 

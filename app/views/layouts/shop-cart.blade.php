@@ -10,12 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Signika:300,400,600,700" />
-    <link rel="stylesheet" type="text/css" href="_assets/_libs/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="_assets/_libs/demo-switcher/demo-switcher.css" />
-    <link rel="stylesheet" type="text/css" href="_assets/_libs/animate.css" />     
-    <link rel="stylesheet" type="text/css" href="_assets/_css/style.css" />    
-    <link rel="stylesheet" type="text/css" href="_assets/_css/colors/green.css" />    
-
+    @include("include/header") 
+    <link rel="shortcut icon" href="{{asset('_img/rose.ico')}}" type="image/x-icon">
 </head>
 <body>
 
@@ -34,176 +30,7 @@
 
     </div>
 
-    <!--
-    header
-    -->
-    <header data-menu-autostart="false">
-    
-        <!--
-        header content
-        -->
-        <div class="header-content">
-        
-            <div class="center">
-            
-                <!--
-                logo
-                -->
-                <div class="left">
-                
-                    <a href="index-2.html"><img src="_assets/_img/logo.png" alt="" /></a>
-                    <div class="header-slogan">HTML5 template <span>for florists</span></div>
-                                 
-                </div>
-                
-                <!--
-                contact informations
-                -->
-                <div class="right">
-                
-                    <div class="padding">
-
-                        <h3>Do you have <span>any question?</span></h3>
-                        
-                        <p>Nunc ac venenatis velit. Integer tincidunt, turpis id bibendum convallis, dui arcu laoreet lectus, a tincidunt nulla lacus et lacus. Pellentesque dignissim urna consec tetur adipiscing elit aenean dapibus.</p>
-                        <p class="action"><a href="index-2.html#contact" class="button button-green">Feel free to contact us!</a> <span>or call us: <strong>+156 98 541 565</strong></span></p>
-
-                    </div>
-                
-                </div>
-                
-                <div class="clear">
-                </div>
-            
-            </div>
-        
-        </div>
-        
-        <!--
-        header menu
-        -->
-        <nav class="header-menu">
-
-            <!--
-            header menu for standard screens
-            -->
-            <ul class="menu menu-standard">
-            
-                <li><a href="index-2.html#home">Home</a></li>
-                <li><a href="index-2.html#about-us">About us</a></li>
-                <li><a href="index-2.html#references">References</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index-2.html#our-bouquets">Our bouquets</a></li>
-                <li><a href="index-2.html#opening-hours">Opening hours</a></li>
-                <li><a href="index-2.html#pricing">Pricing</a></li>
-                <li class="active">
-                
-                    <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
-                
-                    <!--
-                    dropdown menu
-                    -->
-                    <ul class="sub-menu animated speed fadeInUp">
-                    
-                        <li><a href="shop-product.html">Single product</a></li>
-                        <li><a href="shop-cart.html">Cart</a></li>
-                        <li><a href="shop-checkout.html">Checkout</a></li>
-                    
-                    </ul>
-                
-                </li>
-                <li><a href="404.html">404</a></li>
-                <li><a href="index-2.html#contact">Contact</a></li>
-                <li>
-                
-                    <i class="fa fa-search"></i>
-                    
-                    <!--
-                    search form
-                    -->
-                    <form class="search-form animated speed fadeInLeft">
-                    
-                        <input type="text" name="search" placeholder="Type and hit enter..." />
-                    
-                    </form>
-                
-                </li>
-            
-            </ul>
-            
-            <!--
-            header menu for smaller screens (eg. mobile)
-            -->
-            <ul class="menu menu-responsive">
-            
-                <li>
-                
-                    <a>Show menu <i class="fa fa-caret-down"></i> <i class="fa fa-caret-up"></i></a>
-                    
-                    <!--
-                    dropdown menu
-                    -->
-                    <ul class="sub-menu animated speed fadeInUp">
-                    
-                        <li><a href="index-2.html#home">Home</a></li>
-                        <li><a href="index-2.html#about-us">About us</a></li>
-                        <li><a href="index-2.html#references">References</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index-2.html#our-bouquets">Our bouquets</a></li>
-                        <li><a href="index-2.html#opening-hours">Opening hours</a></li>
-                        <li><a href="index-2.html#pricing">Pricing</a></li>
-                        <li class="active">
-                        
-                            <a href="shop.html"><i class="fa fa-caret-left"></i> Shop</a>
-                        
-                            <!--
-                            dropdown menu
-                            -->
-                            <ul class="sub-menu animated speed fadeInUp">
-                            
-                                <li><a href="shop-product.html">Single product</a></li>
-                                <li><a href="shop-cart.html">Cart</a></li>
-                                <li><a href="shop-checkout.html">Checkout</a></li>
-                            
-                            </ul>
-                        
-                        </li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="index-2.html#contact">Contact</a></li>
-                    
-                    </ul>
-                
-                </li>
-                
-                <li>
-                
-                    <i class="fa fa-search"></i>
-                    
-                    <!--
-                    search form
-                    -->
-                    <form class="search-form animated speed fadeInLeft">
-                    
-                        <input type="text" name="search" placeholder="Type and hit enter..." />
-                    
-                    </form>
-                
-                </li>
-            
-            </ul>
-        
-        </nav>
-        
-        <!--
-        header show / hide button
-        -->
-        <div id="menu-button">
-        
-            <i class="fa fa-reorder"></i>
-        
-        </div>
-    
-    </header>
+    @include("include/menu")
     
     <!--
     content
@@ -213,7 +40,7 @@
         <!--
         header
         -->
-        <div class="small-image-header" style="background-image: url( '_assets/_img/florist-working-in-a-store.jpg' ); background-position: 50% 66%;">
+        <div class="small-image-header" style="background-image: url( '_img/florist-working-in-a-store.jpg' ); background-position: 50% 66%;">
 
             <div class="small-image-header-content">
             
@@ -281,152 +108,8 @@
                                     <td class="product-remove">&nbsp;</td>
                             		
                                 </tr>
-    
-                                <!--
-                                single cart item
-                                -->
-    						                <tr class="cart-item">
-
-                          					<!--
-                                    product thumbnail
-                                    -->
-                                    <td class="product-thumbnail">
-                          						
-                                        <div class="thumbnail" style="background-image: url( '_assets/_img/flower.jpg' );">
-                                        </div>
-                                    
-                                    </td>
-                          
-                                    <!--
-                                    product name
-                                    -->
-                          					<td class="product-name">
-                                    
-                          						  <a href="shop-product.html">Flowers pack</a>
-                                        
-                                        <!--
-                                        shop product stars
-                                        -->
-                                        <span class="stars stars-up">
-                                        
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        
-                                        </span> 
-                                    
-                                    </td>
-                          
-                                    <!--
-                                    product price
-                                    -->
-                          					<td class="product-price">$8.50</td>
-                          					
-                                    <!--
-                                    quantity
-                                    -->
-                                    <td class="product-quantity">
-                                    
-                                        <span class="quantity-minus">-</span>
-                                        <span class="quantity-value">1</span>
-                                        <span class="quantity-plus">+</span>
-                                    
-                                    </td>	
-                                    
-                                    <!--
-                                    subtotal
-                                    -->
-                          					<td class="product-subtotal">$8.50</td>
-                                    
-                                    <!--
-                                    remove button
-                                    -->
-                                    <td class="product-remove">
-                          						
-                                        <a href="#" class="remove" title="Remove this item">
-                                        
-                                            <i class="fa fa-times"></i>
-                                        
-                                        </a>
-                                    
-                                    </td>
-                          			
-                                </tr>
                                 
-                                <!--
-                                single cart item
-                                -->
-                                <tr class="cart-item">
-
-                          					<!--
-                                    product thumbnail
-                                    -->
-                                    <td class="product-thumbnail">
-                          						
-                                        <div class="thumbnail" style="background-image: url( '_assets/_img/beautiful-orange-red-tulips-on-grey-background.jpg' );">
-                                        </div>
-                                    
-                                    </td>
-                          
-                                    <!--
-                                    product name
-                                    -->
-                          					<td class="product-name">
-                                    
-                          						  <a href="shop-product.html">Red tulips</a>
-
-                                        <!--
-                                        shop product stars
-                                        -->
-                                        <span class="stars stars-up">
-                                        
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        
-                                        </span> 
-                                    
-                                    </td>
-                          
-                                    <!--
-                                    product price
-                                    -->
-                          					<td class="product-price">$1.50</td>
-                          					
-                                    <!--
-                                    quantity
-                                    -->
-                                    <td class="product-quantity">
-                                    
-                                        <span class="quantity-minus">-</span>
-                                        <span class="quantity-value">9</span>
-                                        <span class="quantity-plus">+</span>
-                                    
-                                    </td>	  
-                                    
-                                    <!--
-                                    subtotal
-                                    -->
-                          					<td class="product-subtotal">$13.50</td>
-                                    
-                                    <!--
-                                    remove button
-                                    -->
-                                    <td class="product-remove">
-                          						
-                                        <a href="#" class="remove" title="Remove this item">
-                                        
-                                            <i class="fa fa-times"></i>
-                                        
-                                        </a>
-                                    
-                                    </td>
-                          			
-                                </tr>
+                                @yield('shop-cart')
     
                                 <!--
                                 actions for shop cart
@@ -450,8 +133,8 @@
                                         <!--
                                         action buttons
                                         -->
-                      				          <input type="submit" class="button button-gray" name="update-cart" value="Update Cart" />
-                                        <a href="shop-checkout.html" class="button button-green">Proceed to Checkout</a>
+                      				    <a href="{{URL::route('shop')}}" class="button button-gray">Update Cart</a>
+                                        <a href="{{URL::route('shop-checkout')}}" class="button button-green">Proceed to Checkout</a>
                                   
                                     </td>
                                 
@@ -481,7 +164,7 @@
     		                        <tr class="cart-subtotal">
                                 
     			                          <td>Cart Subtotal</td>
-    			                          <td><span class="amount">$22.00</span></td>
+                                          @yield('shop-cart-total')
                                     
     		                        </tr>
                                 
@@ -505,7 +188,7 @@
                                 <tr class="order-total">
                                 
                                     <td>Order Total</td>
-    			                          <td><strong>$22.00</strong></td>
+    			                    @yield('shop-cart-total')
                                     
                                 </tr>
                             
@@ -834,7 +517,7 @@
                                 <!--
                                 shop single product image
                                 -->
-                                <div class="shop-single-product-image" style="background-image: url( '_assets/_img/florist-hands-showing-red-roses-bouquet-flowers.jpg' );">
+                                <div class="shop-single-product-image" style="background-image: url( '_img/florist-hands-showing-red-roses-bouquet-flowers.jpg' );">
                                 </div>
                             
                                 <h3>
@@ -873,7 +556,7 @@
                                 <!--
                                 shop single product image
                                 -->
-                                <div class="shop-single-product-image" style="background-image: url( '_assets/_img/lemon-trees-in-pots.jpg' );">
+                                <div class="shop-single-product-image" style="background-image: url( '_img/lemon-trees-in-pots.jpg' );">
                                 </div>
                                 
                                 <h3>
@@ -927,37 +610,12 @@
                             <!--
                             cart products
                             -->
-                            <ul class="cart-products">
-                            
-                                <li>
-                                
-                                    <div class="product-data">
-                                    
-                                        <a href="shop-product.html">Flowers pack</a>
-                                        <div class="data">1 x $8.50</div>
-                                        <div class="line"></div>
-                                    
-                                    </div>
-                                
-                                </li>
-                                
-                                <li>
-                                
-                                    <div class="product-data">
-                                    
-                                        <a href="shop-product.html">Red tulips</a>
-                                        <div class="data">9 x $1.50</div>
-
-                                    </div>
-                                
-                                </li>
-
-                            </ul>
+                            @yield('cart-products')
                             
                             <!--
                             subtotal
                             -->
-                            <h4>Subtotal: <span class="subtotal">$22.00</span></h4>
+                            @yield('cart-subtotals')
                             
                             <!--
                             action links
@@ -1262,23 +920,7 @@
     
     </div>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="_assets/_libs/jquery-2.1.1.min.js"></script>
-    <script src="_assets/_libs/smoothscroll.js"></script>
-    <script src="_assets/_libs/demo-switcher/demo-switcher.js"></script>
-    <script src="_assets/_js/functions.js"></script>
-
-    <!--
-    facebook SDK
-    -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "../../../../connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1476325629301808&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    @include("include.footer")
 
 </body>
 

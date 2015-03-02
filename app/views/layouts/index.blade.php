@@ -10,12 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Signika:300,400,600,700" />
-    {{HTML::style('_libs/font-awesome/css/font-awesome.css')}}
-    {{HTML::style('_libs/demo-switcher/demo-switcher.css')}}"
-    {{HTML::style('_libs/animate.css')}}"
-    {{HTML::style('_css/style.css')}}"
-    {{HTML::style('_css/colors/green.css')}}"
-
+    @include("include/header")
+    <link rel="shortcut icon" href="{{asset('_img/rose.ico')}}" type="image/x-icon">
+    <!-- {{HTML::style('_css/selectize/selectize.bootstrap3.css')}} -->
 </head>
 <body>
 
@@ -192,182 +189,7 @@
     
     </div>
 
-    <!--
-    header
-    -->
-    <header data-menu-autostart="true">
-    
-        <!--
-        header content
-        -->
-        <div class="header-content">
-        
-            <div class="center">
-            
-                <!--
-                logo
-                -->
-                <div class="left">
-
-                    <div class="padding">
-                    <a href="index.html"><img src="{{asset('_img/logo.png')}}" alt="" /></a>
-                    <div class="header-slogan">
-                    
-                    <!--Find store-->
-                    @yield('findstore')
-                        
-                    </div>
-                    </div>             
-                </div>
-                
-                <!--
-                contact informations
-                -->
-                <div class="right">
-                
-                    <div class="padding">
-
-                        <h3>Do you have <span>any question?</span></h3>
-                        
-                        <p>Nunc ac venenatis velit. Integer tincidunt, turpis id bibendum convallis, dui arcu laoreet lectus, a tincidunt nulla lacus et lacus. Pellentesque dignissim urna consec tetur adipiscing elit aenean dapibus.</p>
-                        <p class="action"><a href="index-2.html#contact" class="button button-green">Feel free to contact us!</a> <span>or call us: <strong>+156 98 541 565</strong></span></p>
-
-                    </div>
-                
-                </div>
-                
-                <div class="clear">
-                </div>
-            
-            </div>
-        
-        </div>
-        
-        <!--
-        header menu
-        -->
-        <nav class="header-menu">
-
-            <!--
-            header menu for standard screens
-            -->
-            <ul class="menu menu-standard">
-            
-                <li class="active"><a href="index-2.html#home">Home</a></li>
-                <li><a href="index-2.html#about-us">About us</a></li>
-                <li><a href="index-2.html#references">References</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index-2.html#our-bouquets">Our bouquets</a></li>
-                <li><a href="index-2.html#opening-hours">Opening hours</a></li>
-                <li><a href="index-2.html#pricing">Pricing</a></li>
-                <li>
-                
-                    <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
-                
-                    <!--
-                    dropdown menu
-                    -->
-                    <ul class="sub-menu animated speed fadeInUp">
-                    
-                        <li><a href="shop-product.html">Single product</a></li>
-                        <li><a href="shop-cart.html">Cart</a></li>
-                        <li><a href="shop-checkout.html">Checkout</a></li>
-                    
-                    </ul>
-                
-                </li>
-                <li><a href="404.html">404</a></li>
-                <li><a href="index-2.html#contact">Contact</a></li>
-                <li>
-                
-                    <i class="fa fa-search"></i>
-                    
-                    <!--
-                    search form
-                    -->
-                    <form class="search-form animated speed fadeInLeft">
-                    
-                        <input type="text" name="search" placeholder="Type and hit enter..." />
-                    
-                    </form>
-                
-                </li>
-            
-            </ul>
-            
-            <!--
-            header menu for smaller screens (eg. mobile)
-            -->
-            <ul class="menu menu-responsive">
-            
-                <li>
-                
-                    <a>Show menu <i class="fa fa-caret-down"></i> <i class="fa fa-caret-up"></i></a>
-                    
-                    <!--
-                    dropdown menu
-                    -->
-                    <ul class="sub-menu animated speed fadeInUp">
-                    
-                        <li class="active"><a href="index-2.html#home">Home</a></li>
-                        <li><a href="index-2.html#about-us">About us</a></li>
-                        <li><a href="index-2.html#references">References</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index-2.html#our-bouquets">Our bouquets</a></li>
-                        <li><a href="index-2.html#opening-hours">Opening hours</a></li>
-                        <li><a href="index-2.html#pricing">Pricing</a></li>
-                        <li>
-                        
-                            <a href="shop.html"><i class="fa fa-caret-left"></i> Shop</a>
-                        
-                            <!--
-                            dropdown menu
-                            -->
-                            <ul class="sub-menu animated speed fadeInUp">
-                            
-                                <li><a href="shop-product.html">Single product</a></li>
-                                <li><a href="shop-cart.html">Cart</a></li>
-                                <li><a href="shop-checkout.html">Checkout</a></li>
-                            
-                            </ul>
-                        
-                        </li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="index-2.html#contact">Contact</a></li>
-                    
-                    </ul>
-                
-                </li>
-                
-                <li>
-                
-                    <i class="fa fa-search"></i>
-                    
-                    <!--
-                    search form
-                    -->
-                    <form class="search-form animated speed fadeInLeft">
-                    
-                        <input type="text" name="search" placeholder="Type and hit enter..." />
-                    
-                    </form>
-                
-                </li>
-            
-            </ul>
-        
-        </nav>
-        
-        <!--
-        header show / hide button
-        -->
-        <div id="menu-button">
-        
-            <i class="fa fa-reorder"></i>
-        
-        </div>
-    
-    </header>  
+    @include("include/menu")
     
     <!--
     content
@@ -558,7 +380,7 @@
                                 
                                 </ul>
                                 
-                                <p class="action"><a href="index-2.html#references">Read our clients references</a></p>
+                                <p class="action"><a href="{{URL::route('home')}}#references">Read our clients references</a></p>
                                 
                             </div>
                         
@@ -591,183 +413,7 @@
             products
             -->
             <section class="products">
-            
-                <!--
-                single product
-                -->
-                <div class="products-element">
-
-                    <div class="padding">
-                    
-                        <!--
-                        single product image
-                        -->
-                        <div class="products-element-image" style="background-image: url( '{{asset('_img/lemon-trees-in-pots.jpg')}}' );">
-                        </div>
-                    
-                        <h3>
-                        
-                            <a href="shop-product.html">Lemon trees</a>
-                        
-                            <!--
-                            shop product stars
-                            -->
-                            <span class="stars">
-                            
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            
-                            </span>
-                        
-                        </h3>
-                        
-                        <p>Your own lemons at home.</p>
-                        
-                        <!--
-                        actions
-                        -->
-                        <p class="actions"><span class="price">$15.00</span> <a href="shop-cart.html" class="add-to-cart">Add to cart</a></p>
-                                        
-                    </div>
-                
-                </div>
-                
-                <!--
-                single product
-                -->
-                <div class="products-element products-element-last-when-responsive">
-
-                    <div class="padding">
-                    
-                        <!--
-                        single product image
-                        -->
-                        <div class="products-element-image" style="background-image: url( '{{asset('_img/flower.jpg')}}' );">
-                        </div>
-                        
-                        <h3>
-                        
-                            <a href="shop-product.html">Flowers pack</a>
-                            
-                            <!--
-                            shop product stars
-                            -->
-                            <span class="stars">
-                            
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            
-                            </span>
-                        
-                        </h3>
-                        
-                        <p>Great home decoration.</p>
-                        
-                        <!--
-                        actions
-                        -->
-                        <p class="actions"><span class="price">$8.50</span> <a href="shop-cart.html" class="add-to-cart">Add to cart</a></p>
-                                        
-                    </div>
-                
-                </div>
-                
-                <div class="products-bottom">
-                
-                    <!--
-                    single product
-                    -->
-                    <div class="products-element">
-     
-                        <div class="padding">
-                        
-                            <!--
-                            single product image
-                            -->
-                            <div class="products-element-image" style="background-image: url( '{{asset('_img/flower-shop-in-gorinchem-netherlands.jpg')}}' );">
-                            </div>
-                            
-                            <h3>
-                            
-                                <a href="shop-product.html">Home decoration</a>
-                            
-                                <!--
-                                shop product stars
-                                -->
-                                <span class="stars">
-                                
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                
-                                </span>
-                            
-                            </h3>
-                            
-                            <p>Fresh flowers in small pack.</p>
-                            
-                            <!--
-                            actions
-                            -->
-                            <p class="actions"><span class="price">$4.50</span> <a href="shop-cart.html" class="add-to-cart">Add to cart</a></p>
-                        
-                        </div>
-                    
-                    </div>
-                    
-                    <!--
-                    single product: last
-                    -->
-                    <div class="products-element products-element-last">
-    
-                        <div class="padding">
-    
-                            <!--
-                            single product image
-                            -->
-                            <div class="products-element-image" style="background-image: url( '{{asset('_img/florist-hands-showing-red-roses-bouquet-flowers.jpg')}}' );">
-                            </div>
-                            
-                            <h3>
-                            
-                                <a href="shop-product.html">Roses bouquet</a>
-                            
-                                <!--
-                                shop product stars
-                                -->
-                                <span class="stars">
-                                
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                
-                                </span>
-                            
-                            </h3>
-                            
-                            <p>Perfect gift for your wife.</p>
-                            
-                            <!--
-                            actions
-                            -->
-                            <p class="actions"><span class="price">$9.00</span> <a href="shop-cart.html" class="add-to-cart">Add to cart</a></p>
-    
-                        </div>
-                    
-                    </div>
-                
-                </div>
-            
+                @yield('products')
             </section>
             
             <!--
@@ -1324,7 +970,7 @@
                         
                         <p>Nunc ac venenatis velit. Integer tincidunt, turpis id bibendum convallis, dui arcu laoreet lectus.</p>
                         <p>Donec pulvinar lacus sed lacus congue tincidunt.</p>
-                        <p><a href="index-2.html#references">Read our references</a>.</p>
+                        <p><a href="{{URL::route('home')}}#references">Read our references</a>.</p>
                     
                     </div>
                 
@@ -1408,24 +1054,7 @@
     
     </div>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    {{HTML::script('_libs/jquery-2.1.1.min.js')}}
-    {{HTML::script('_libs/smoothscroll.js')}}
-    {{HTML::script('_libs/demo-switcher/demo-switcher.js')}}
-    {{HTML::script('_js/functions.js')}}
-    <!-- {{HTML::script('_js/hieudt/custom-index.js')}} -->
-
-    <!--
-    facebook SDK
-    -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1476325629301808&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    @include("include.footer")
     
 </body>
 

@@ -1187,10 +1187,24 @@ $( document ).ready( function() {
         var quantityValueElement = $( this ).siblings( '.quantity-value' );
         var quantityValue = parseInt( quantityValueElement.html() );
 
-        if( typeof quantityValue != 'undefined' ) {
-
-            quantityValueElement.html( quantityValue - 1 <= 1 ? 1 : quantityValue - 1 );            
-        }   
+        var dataString = "id=" + $(this).parent().attr("id") + "&qty=" + (quantityValue - 1 <= 1 ? 1 : quantityValue - 1);
+        $.ajax({
+            url: "shopcart/update",
+            type: "POST",
+            data: dataString,
+            cache: false,
+            success: function(data) {
+                var check = $.parseJSON(data);
+                console.log(check);
+                if(check == "true" || check == true){
+                    if( typeof quantityValue != 'undefined' ) {
+                        quantityValueElement.html( quantityValue - 1 <= 1 ? 1 : quantityValue - 1 );            
+                    } 
+                }
+            },
+            error: function(){
+            }
+        });
     
     });
     
@@ -1204,12 +1218,24 @@ $( document ).ready( function() {
 
         var quantityValueElement = $( this ).siblings( '.quantity-value' );
         var quantityValue = parseInt( quantityValueElement.html() );
-
-        if( typeof quantityValue != 'undefined' ) {
-
-            quantityValueElement.html( quantityValue + 1 );            
-        }    
-            
+        var dataString = "id=" + $(this).parent().attr("id") + "&qty=" + (quantityValue + 1);
+        $.ajax({
+            url: "shopcart/update",
+            type: "POST",
+            data: dataString,
+            cache: false,
+            success: function(data) {
+                var check = $.parseJSON(data);
+                console.log(check);
+                if(check == "true" || check == true){
+                    if( typeof quantityValue != 'undefined' ) {
+                        quantityValueElement.html( quantityValue + 1 );            
+                    }
+                }
+            },
+            error: function(){
+            }
+        });
     });
     
    /**
@@ -1829,7 +1855,94 @@ $( document ).ready( function() {
         }, 200 );
     
     });                     
-        
+
+    
+
+    $('#place_order').click(function(){
+        if ($("#different-address").is(":checked")) {
+            var country = $("#country2").val();
+            var first_name = $("#first_name2").val();
+            var last_name = $("#last_name2").val();
+            var company_name = $("#company_name2").val();
+            var address = $("#address2").val();
+            var address_detail = $("#address_detail2").val();
+            var town_city = $("#town_city2").val();
+            var state_country = $("#state_country2").val();
+            var postcode = $("#postcode2").val();
+            var email = $("#email1").val();
+            var phone = $("#phone1").val();
+            var notes = $("#notes").val();
+            if (country == "" || first_name == "" || last_name == "" || company_name == "" || address =="" || town_city == "" || state_country == "" || email == "" || phone == "") {
+                alert("Please complete your information!");
+            } else{
+                var dataString = "action=order&email=" + email
+                                + "&phone=" + phone
+                                + "&country=" + country
+                                + "&first_name=" + first_name
+                                + "&last_name=" + last_name
+                                + "&company_name=" + company_name
+                                + "&address=" + address
+                                + "&address_detail=" + address_detail
+                                + "&town_city=" + town_city
+                                + "&state_country=" + state_country
+                                + "&postcode=" + postcode
+                                + "&notes=" + notes;
+                $.ajax({
+                    url: "checkout/order",
+                    type: "GET",
+                    data: dataString,
+                    cache: false,
+                    success: function(data){
+                    },
+                    error: function(){
+                        alert("So sorry! Now, cannot connect to server.");
+                    }
+                });
+            }
+        } else{
+            var country = $("#country1").val();
+            var first_name = $("#first_name1").val();
+            var last_name = $("#last_name1").val();
+            var company_name = $("#company_name1").val();
+            var address = $("#address1").val();
+            var address_detail = $("#address_detail1").val();
+            var town_city = $("#town_city1").val();
+            var state_country = $("#state_country1").val();
+            var postcode = $("#postcode1").val();
+            var email = $("#email1").val();
+            var phone = $("#phone1").val();
+            var notes = $("#notes").val();
+
+            if (country == "" || first_name == "" || last_name == "" || company_name == "" || address =="" || town_city == "" || state_country == "" || email == "" || phone == "") {
+                alert("Please complete your information!");
+            } else{
+                var dataString = "action=order&email=" + email
+                                + "&phone=" + phone
+                                + "&country=" + country
+                                + "&first_name=" + first_name
+                                + "&last_name=" + last_name
+                                + "&company_name=" + company_name
+                                + "&address=" + address
+                                + "&address_detail=" + address_detail
+                                + "&town_city=" + town_city
+                                + "&state_country=" + state_country
+                                + "&postcode=" + postcode
+                                + "&notes=" + notes;
+                $.ajax({
+                    url: "checkout/order",
+                    type: "GET",
+                    data: dataString,
+                    cache: false,
+                    success: function(data){
+                    },
+                    error: function(error){
+                        alert("So sorry! Now, cannot connect to server.");
+                    }
+                });
+            }
+        }
+    });
+
    /**
     *
     * getting section position
@@ -1928,7 +2041,8 @@ $( document ).ready( function() {
         *
         * end of line.
         *
-        */                                        
+        */
     }     
 
-}( jQuery )); 
+}( jQuery ));
+
