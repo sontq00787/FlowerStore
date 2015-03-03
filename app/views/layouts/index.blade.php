@@ -607,7 +607,7 @@
                                 <!--
                                 promotion action link
                                 -->
-                                <p class="action"><a href="shop.html" class="button button-green">Purchase online!</a> <span>available until <strong>15 October, 2014</strong></span></p>
+                                <p class="action"><a href="{{URL::route('shop')}}" class="button button-green">Purchase online!</a> <span>available until <strong>15 October, 2014</strong></span></p>
                             
                             </div>
         

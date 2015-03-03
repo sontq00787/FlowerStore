@@ -1893,6 +1893,7 @@ $( document ).ready( function() {
                     data: dataString,
                     cache: false,
                     success: function(data){
+                        alert($.parseJSON(data));
                     },
                     error: function(){
                         alert("So sorry! Now, cannot connect to server.");
@@ -1934,6 +1935,7 @@ $( document ).ready( function() {
                     data: dataString,
                     cache: false,
                     success: function(data){
+                        alert($.parseJSON(data));
                     },
                     error: function(error){
                         alert("So sorry! Now, cannot connect to server.");
